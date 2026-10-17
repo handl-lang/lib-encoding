@@ -113,12 +113,14 @@ impl Function for Decode {
 
 pub const ENCODING_OPS: &[&str] = &["encoding.encode", "encoding.decode"];
 
-pub fn encoding_op_registry() -> OpRegistry {
-    let registry = Arc::new(
-        EncodingRegistry::new()
-            .with("base64", crate::codecs::Base64)
-            .with("hex", crate::codecs::Hex),
-    );
+/// Build the `encoding.*` op registry over a caller-supplied codec registry.
+///
+/// The codecs are **not** known here: each `lib-<codec>` repo registers itself
+/// (`handl_lib_base64::register(…)`), so this crate stays contract-only and can
+/// be deleted first when the ops move to `ffi.call` (plan
+/// `stdlib-lib-migration` Phase 7).
+pub fn encoding_op_registry_with(registry: EncodingRegistry) -> OpRegistry {
+    let registry = Arc::new(registry);
     let mut registry_ops = OpRegistry::new();
     registry_ops.register(
         "encoding.encode",
@@ -133,4 +135,9 @@ pub fn encoding_op_registry() -> OpRegistry {
         }),
     );
     registry_ops
+}
+
+/// An empty-codec registry — every codec name is unknown.
+pub fn encoding_op_registry() -> OpRegistry {
+    encoding_op_registry_with(EncodingRegistry::new())
 }

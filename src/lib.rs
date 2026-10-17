@@ -18,7 +18,6 @@
 //! the `.hnl` source, eliminating the hand-rolled `Plugin` trait
 //! scaffolding.
 
-pub mod codecs;
 pub mod encoding;
 pub mod ops;
 pub mod error;
@@ -27,8 +26,7 @@ pub mod traits;
 pub use encoding::{Encoding, EncodingRegistry};
 pub use error::EncodingError;
 pub use traits::{Decoder, Encoder};
-pub use codecs::{Base64, Hex};
-pub use ops::{encoding_op_registry, ENCODING_OPS};
+pub use ops::{encoding_op_registry, encoding_op_registry_with, ENCODING_OPS};
 
 use handl_plugin_lib_handl::HandlLibraryPlugin;
 
