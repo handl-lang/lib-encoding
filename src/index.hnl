@@ -24,5 +24,11 @@ op "encoding.encode" : (Value * Value) -> String
   guarantee: True
 op "encoding.decode" : (Value * Value) -> Value
   guarantee: True
-handle "encoding.encode" with rust_encoding_encode
-handle "encoding.decode" with rust_encoding_decode
+handle "encoding.encode" with encode
+handle "encoding.decode" with decode
+
+--- Codec dispatch: the codec object is a record carrying `encode`/`decode`
+--- arrows — produced by `hex.codec`/`base64.codec`/… — so `encoding.*` is a
+--- pure `.hnl` field-call; no Rust registry needed.
+export encode := (v, codec_obj) ~> (codec_obj.encode)(v)
+export decode := (v, codec_obj) ~> (codec_obj.decode)(v)
