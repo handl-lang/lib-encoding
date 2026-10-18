@@ -1,0 +1,327 @@
+name: lib-encoding
+path: src/error.rs
+purpose: lib-encoding
+api:
+- name: EncodingError
+  kind: type
+  file: src/error.rs
+  line: 5
+  module: lib-encoding
+- name: new
+  kind: function
+  file: src/error.rs
+  line: 12
+  module: lib-encoding
+- name: Encoder
+  kind: trait
+  file: src/traits.rs
+  line: 4
+  module: lib-encoding
+- name: Decoder
+  kind: trait
+  file: src/traits.rs
+  line: 14
+  module: lib-encoding
+- name: codec_name
+  kind: function
+  file: src/ops.rs
+  line: 23
+  module: lib-encoding
+- name: Encode
+  kind: type
+  file: src/ops.rs
+  line: 54
+  module: lib-encoding
+- name: call
+  kind: function
+  file: src/ops.rs
+  line: 59
+  module: lib-encoding
+- name: Decode
+  kind: type
+  file: src/ops.rs
+  line: 85
+  module: lib-encoding
+- name: call
+  kind: function
+  file: src/ops.rs
+  line: 90
+  module: lib-encoding
+- name: ENCODING_OPS
+  kind: const
+  file: src/ops.rs
+  line: 114
+  module: lib-encoding
+- name: encoding_op_registry_with
+  kind: function
+  file: src/ops.rs
+  line: 122
+  module: lib-encoding
+- name: encoding_op_registry
+  kind: function
+  file: src/ops.rs
+  line: 141
+  module: lib-encoding
+- name: Encoding
+  kind: trait
+  file: src/encoding.rs
+  line: 11
+  module: lib-encoding
+- name: EncodingRegistry
+  kind: type
+  file: src/encoding.rs
+  line: 21
+  module: lib-encoding
+- name: new
+  kind: function
+  file: src/encoding.rs
+  line: 27
+  module: lib-encoding
+- name: with
+  kind: function
+  file: src/encoding.rs
+  line: 34
+  module: lib-encoding
+- name: get
+  kind: function
+  file: src/encoding.rs
+  line: 40
+  module: lib-encoding
+- name: encoding
+  kind: module
+  file: src/lib.rs
+  line: 21
+  module: lib-encoding
+- name: ops
+  kind: module
+  file: src/lib.rs
+  line: 22
+  module: lib-encoding
+- name: error
+  kind: module
+  file: src/lib.rs
+  line: 23
+  module: lib-encoding
+- name: traits
+  kind: module
+  file: src/lib.rs
+  line: 24
+  module: lib-encoding
+- name: ENCODING_HNL
+  kind: const
+  file: src/lib.rs
+  line: 36
+  module: lib-encoding
+- name: encode
+  kind: function
+  file: src/lib.rs
+  line: 39
+  module: lib-encoding
+- name: decode
+  kind: function
+  file: src/lib.rs
+  line: 47
+  module: lib-encoding
+- name: EncodingLibraryPlugin
+  kind: type
+  file: src/lib.rs
+  line: 66
+  module: lib-encoding
+- name: new
+  kind: function
+  file: src/lib.rs
+  line: 72
+  module: lib-encoding
+- name: default
+  kind: function
+  file: src/lib.rs
+  line: 86
+  module: lib-encoding
+- name: id
+  kind: function
+  file: src/lib.rs
+  line: 92
+  module: lib-encoding
+- name: name
+  kind: function
+  file: src/lib.rs
+  line: 96
+  module: lib-encoding
+- name: capabilities
+  kind: function
+  file: src/lib.rs
+  line: 100
+  module: lib-encoding
+- name: metadata
+  kind: function
+  file: src/lib.rs
+  line: 104
+  module: lib-encoding
+- name: contribute
+  kind: function
+  file: src/lib.rs
+  line: 111
+  module: lib-encoding
+- name: run
+  kind: function
+  file: src/lib.rs
+  line: 118
+  module: lib-encoding
+- name: encoding_handl_plugin
+  kind: function
+  file: src/lib.rs
+  line: 131
+  module: lib-encoding
+- name: tests
+  kind: module
+  file: src/lib.rs
+  line: 156
+  module: lib-encoding
+- name: plugin_id_and_name
+  kind: function
+  file: src/lib.rs
+  line: 161
+  module: lib-encoding
+- name: plugin_has_capabilities
+  kind: function
+  file: src/lib.rs
+  line: 168
+  module: lib-encoding
+- name: handl_plugin_id_and_name
+  kind: function
+  file: src/lib.rs
+  line: 178
+  module: lib-encoding
+deps:
+- thiserror
+- handl_plugin_lib_handl
+- handl_platform
+- serde_json
+- encoding
+- error
+- traits
+- ops
+- handl_plugin_lib_handl
+- handl_platform
+notes: ''
+verify:
+- src/error.rs
+- src/error.rs
+- src/traits.rs
+- src/traits.rs
+- src/ops.rs
+- src/ops.rs
+- src/ops.rs
+- src/ops.rs
+- src/ops.rs
+- src/ops.rs
+- src/ops.rs
+- src/ops.rs
+- src/encoding.rs
+- src/encoding.rs
+- src/encoding.rs
+- src/encoding.rs
+- src/encoding.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+provenance:
+  files:
+  - src/error.rs
+  - src/error.rs
+  - src/traits.rs
+  - src/traits.rs
+  - src/ops.rs
+  - src/ops.rs
+  - src/ops.rs
+  - src/ops.rs
+  - src/ops.rs
+  - src/ops.rs
+  - src/ops.rs
+  - src/ops.rs
+  - src/encoding.rs
+  - src/encoding.rs
+  - src/encoding.rs
+  - src/encoding.rs
+  - src/encoding.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  hashes:
+  - 3e5b1177254cfbe71d295aa573c50c8008f57c07
+  - 3e5b1177254cfbe71d295aa573c50c8008f57c07
+  - 4fd35ce54a06d2a9ce92d1504fcd6ada1790382b
+  - 4fd35ce54a06d2a9ce92d1504fcd6ada1790382b
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - a742308b6379230b9fb609d838820a29dc98ce6b
+  - a742308b6379230b9fb609d838820a29dc98ce6b
+  - a742308b6379230b9fb609d838820a29dc98ce6b
+  - a742308b6379230b9fb609d838820a29dc98ce6b
+  - a742308b6379230b9fb609d838820a29dc98ce6b
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  commit_sha: 87a40c9269d9069e6870b6f2e57a96eeb33ab2c8
+  generated_at: '1792281222'
+  generator: kuda-template/0.1.0

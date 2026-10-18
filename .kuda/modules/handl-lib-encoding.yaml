@@ -1,0 +1,26 @@
+name: handl-lib-encoding
+path: Cargo.toml
+purpose: 'encoding: Handl stdlib port + the Encoder/Decoder/Encoding trait (ADR-0128 split).'
+api:
+- name: handl-lib-encoding
+  kind: module
+  file: Cargo.toml
+  line: 1
+  module: handl-lib-encoding
+deps:
+- handl-lib-ops
+- handl-platform
+- handl-plugin-lib-handl
+- serde_json
+- thiserror
+notes: ''
+verify:
+- Cargo.toml
+provenance:
+  files:
+  - Cargo.toml
+  hashes:
+  - b7296ab6f7b4d1bfab17f2d83648bb8d87970709
+  commit_sha: 87a40c9269d9069e6870b6f2e57a96eeb33ab2c8
+  generated_at: '1792281222'
+  generator: kuda-template/0.1.0

@@ -1,0 +1,27 @@
+name: lib-encoding
+root: /home/luis/GitHub/handl-lang/lib-encoding
+purpose: ''
+modules:
+- handl-lib-encoding
+- lib-encoding
+commands:
+- cargo check
+- cargo test --workspace
+provenance:
+  files:
+  - Cargo.toml
+  - src/error.rs
+  - src/traits.rs
+  - src/ops.rs
+  - src/encoding.rs
+  - src/lib.rs
+  hashes:
+  - b7296ab6f7b4d1bfab17f2d83648bb8d87970709
+  - 3e5b1177254cfbe71d295aa573c50c8008f57c07
+  - 4fd35ce54a06d2a9ce92d1504fcd6ada1790382b
+  - 003bbcbf65048c2fea169b1ec6fdd34678c4a26d
+  - a742308b6379230b9fb609d838820a29dc98ce6b
+  - f5f229fe30e997e30a3a5b2519becd9717ea99a9
+  commit_sha: 87a40c9269d9069e6870b6f2e57a96eeb33ab2c8
+  generated_at: '1792281222'
+  generator: kuda/0.1.0
