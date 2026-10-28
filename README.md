@@ -15,3 +15,7 @@ ci.sh           bupha entry
 ```
 
 **Transitional** — Phase 7 rewrites the ops as `ffi.call`.
+
+## License
+
+MIT.
