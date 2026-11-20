@@ -1,1 +1,8 @@
-{ modules: ["encoding"] }
+{
+  modules: ["encoding"],
+  name: "encoding",
+  description: "Codec port — Encoder/Decoder/Encoding traits and the encoding registry contract.",
+  license: "MIT",
+  keywords: ["encoding", "codec", "traits", "stdlib"],
+  homepage: "https://github.com/handl-lang/lib-encoding",
+}
