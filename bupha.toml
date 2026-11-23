@@ -6,7 +6,7 @@
 
 [[repos]]
 name = "handl-lang/lib-encoding"
-dir = "/home/luis/GitHub/handl-lang/lib-encoding"
+dir = "~/GitHub/handl-lang/lib-encoding"
 branch = "refs/heads/main"
   [repos.runner]
   kind = "script"
