@@ -1,3 +1,29 @@
+# lib-encoding
+
+`encoding` — the codec **port**: `Encoder`/`Decoder`/`Encoding`/
+`EncodingRegistry` traits that `lib-base64` and `lib-hex` implement.
+
+## Layout
+
+| path | role |
+| --- | --- |
+| `src/index.hnl` | the interface — op declarations + handles |
+| `pkg.hnl` | manifest — `modules: ["encoding"]` |
+| `scripts/hnl-gate.sh` | `.hnl` gate |
+| `workflows/gate.yaml` | CI — shared `handl-gates` campaign |
+
+## Contract
+
+- Contract/trait repo — declare the codec surface here; concrete
+  encodings are sibling packages (`lib-base64`, `lib-hex`).
+- Implementors declare `encoding` as a git dep on `branch:main`.
+
+## Verification
+
+```bash
+HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
+```
+
 <!-- myco:agent-awareness -->
 
 ## Agent awareness
