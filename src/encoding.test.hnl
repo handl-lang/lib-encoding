@@ -1,0 +1,18 @@
+--- Smoke tests for the `encoding` codec port (`src/index.hnl`).
+---
+--- `encode`/`decode` are thin delegates onto a caller-supplied codec
+--- object (`codec_obj.encode(v)` / `codec_obj.decode(v)`); the native
+--- `encoding.encode`/`encoding.decode` ops are FFI atoms covered by the
+--- Rust side. These tests exercise the delegation with a codec record
+--- built from existing stdlib arrows (`type.to_string` /
+--- `typeof.to_number`) — no `~>` literals needed.
+
+from "./index" import * as m
+from "type" import * as type
+from "typeof" import * as typeof
+
+codec := { encode: type.to_string, decode: typeof.to_number }
+
+test_encode_delegates := assert m.encode(42, codec) == "42"
+
+test_decode_delegates := assert m.decode("42", codec) == 42
